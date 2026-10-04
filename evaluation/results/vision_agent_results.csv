@@ -1,0 +1,11 @@
+agent,image,reference_label,prediction,correct,foreground_percentage,nonempty_mask
+chest_xray,covid-example-01.jpg,covid19,covid19,True,,
+chest_xray,covid-example-02.jpeg,covid19,covid19,True,,
+chest_xray,covid-19-pneumonia-101.png,covid19,covid19,True,,
+chest_xray,NORMAL2-IM-0362-0001.jpeg,normal,normal,True,,
+chest_xray,NORMAL2-IM-0374-0001.jpeg,normal,normal,True,,
+skin_lesion,ISIC_0012558.jpg,,,,9.0668,True
+skin_lesion,ISIC_0012559.jpg,,,,6.7322,True
+skin_lesion,ISIC_0012560.jpg,,,,3.1769,True
+skin_lesion,ISIC_0012563.jpg,,,,62.7930,True
+skin_lesion,ISIC_0012564.jpg,,,,16.8350,True

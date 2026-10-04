@@ -1,0 +1,62 @@
+{
+  "models": {
+    "chest_xray": {
+      "architecture": "DenseNet-121",
+      "checkpoint": "agents/image_analysis_agent/chest_xray_agent/models/covid_chest_xray_model.pth"
+    },
+    "skin_lesion": {
+      "architecture": "U-Net",
+      "checkpoint": "agents/image_analysis_agent/skin_lesion_agent/models/checkpointN25_.pth.tar"
+    }
+  },
+  "thresholds": {
+    "skin_probability": 0.5
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "Linux-7.1.9-arch1-2-x86_64-with-glibc2.44",
+    "torch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu",
+    "opencv": "5.0.0",
+    "numpy": "2.5.2",
+    "device": "cpu"
+  },
+  "sample_counts": {
+    "chest_xray": 5,
+    "skin_lesion": 5,
+    "total": 10
+  },
+  "chest_xray": {
+    "positive_class": "covid19",
+    "confusion_counts": {
+      "tp": 3,
+      "tn": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "accuracy_exact_binomial_95_ci": [
+        0.47817624989501856,
+        1.0
+      ]
+    }
+  },
+  "skin_lesion": {
+    "successful_inferences": 5,
+    "nonempty_masks": 5,
+    "foreground_percentage": {
+      "ISIC_0012558.jpg": 9.0668,
+      "ISIC_0012559.jpg": 6.7322,
+      "ISIC_0012560.jpg": 3.1769,
+      "ISIC_0012563.jpg": 62.793,
+      "ISIC_0012564.jpg": 16.835
+    },
+    "segmentation_accuracy": null,
+    "accuracy_note": "Expert reference masks are unavailable; foreground percentage is descriptive, not segmentation accuracy."
+  }
+}
